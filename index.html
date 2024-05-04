@@ -4,16 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
     <!-- Main css -->
+    <!-- <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> -->
     <link rel="stylesheet" href="style.css">
     <title>Personal Portfolio</title>
 </head>
 <body>
     <!-- Header Design -->
-    <header class="header">
+    <header class="header" data-aos="fade-down" >
         <a class="logo" href="#">Portfolio</a>
         <nav class="navbar">
             <a href="#home" class="active">Home</a>
@@ -21,8 +23,8 @@
             <a href="#services">Services</a>
             <a href="#portfolio">Portfolio</a>
             <a href="#contact">Contact</a>
+            <i class="fa-solid fa-sun" id="dark-mode"></i>
         </nav>
-
         <i class="fa-solid fa-bars" id="menu-icon"></i>
     </header>
 
@@ -49,11 +51,11 @@
 
     <!-- About section Design -->
     <section class="about" id="about">
-        <div class="about-img">
-            <img src="./Picsart_24-05-01_01-15-57-048 (1).jpg" alt="">
+        <div class="about-img" data-aos="fade-right" >
+            <img src="./assets/Picsart_24-05-04_01-44-24-479.png" alt="">
         </div>
 
-        <div class="about-content">
+        <div class="about-content" data-aos="zoom-in-up" >
             <h2 class="heading">ABOUT <span>Me</span></h2>
             <h3> FullStack Developer</h3>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam, sit qui laudantium et molestiae, natus earum saepe, corrupti id quo dolor veniam consequuntur doloribus aspernatur? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis, incidunt natus laboriosam sunt impedit repudiandae iusto. Cum quaerat quis nobis!</p>
@@ -68,21 +70,21 @@
 
         <div class="services-containor">
 
-            <div class="Services-box">
+            <div class="Services-box" data-aos="zoom-in">
                 <i class="fa-solid fa-code"></i>
                 <h3>Web Development</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam odit quaerat necessitatibus magni voluptate corporis esse, facere assumenda id sint dolorem fuga iste amet! Quia quisquam officiis unde ducimus iusto?</p>
                 <a href="#" class="btn">Read More</a>
             </div>
     
-            <div class="Services-box">
+            <div class="Services-box" data-aos="zoom-in">
                 <i class="fa-solid fa-palette"></i>
                 <h3>UI/UX</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam odit quaerat necessitatibus magni voluptate corporis esse, facere assumenda id sint dolorem fuga iste amet! Quia quisquam officiis unde ducimus iusto?</p>
                 <a href="#" class="btn">Read More</a>
             </div>
     
-            <div class="Services-box">
+            <div class="Services-box" data-aos="zoom-in" >
                 <i class="fa-brands fa-android"></i>
                 <h3>Web Development</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam odit quaerat necessitatibus magni voluptate corporis esse, facere assumenda id sint dolorem fuga iste amet! Quia quisquam officiis unde ducimus iusto?</p>
@@ -96,7 +98,7 @@
     <section class="portfolio" id="portfolio">
         <h2 class="heading">Latest <span>Projects</span></h2>
         <div class="portfolio-containor">
-            <div class="portfolio-box">
+            <div class="portfolio-box" data-aos="flip-left" >
                 <img src="./assets/1.jpg" alt="">
                 <div class="portfolio-layer">
                     <h4>Web Design</h4>
@@ -105,7 +107,7 @@
                 </div>
             </div>
 
-            <div class="portfolio-box">
+            <div class="portfolio-box" data-aos="flip-left" >
                 <img src="./assets/2.jpg" alt="">
                 <div class="portfolio-layer">
                     <h4>Web Design</h4>
@@ -114,7 +116,7 @@
                 </div>
             </div>
 
-            <div class="portfolio-box">
+            <div class="portfolio-box" data-aos="flip-left" >
                 <img src="./assets/3.jpg" alt="">
                 <div class="portfolio-layer">
                     <h4>Web Design</h4>
@@ -123,7 +125,7 @@
                 </div>
             </div>
 
-            <div class="portfolio-box">
+            <div class="portfolio-box" data-aos="flip-left" >
                 <img src="./assets/4.jpg" alt="">
                 <div class="portfolio-layer">
                     <h4>Web Design</h4>
@@ -132,7 +134,7 @@
                 </div>
             </div>
 
-            <div class="portfolio-box">
+            <div class="portfolio-box" data-aos="flip-left" >
                 <img src="./assets/5.jpg" alt="">
                 <div class="portfolio-layer">
                     <h4>Web Design</h4>
@@ -141,7 +143,7 @@
                 </div>
             </div>
 
-            <div class="portfolio-box">
+            <div class="portfolio-box" data-aos="flip-left" >
                 <img src="./assets/6.jpg" alt="">
                 <div class="portfolio-layer">
                     <h4>Web Design</h4>
@@ -153,8 +155,8 @@
     </section>
 
     
-    <!-- Portfolio section Design -->
-    <section class="contact" id="contact">
+    <!-- Contact section Design -->
+    <section class="contact" id="contact" data-aos="zoom-in-up" >
         <h2 class="heading">Contact <span>Me</span></h2>
         
         <form action="#">
@@ -185,8 +187,19 @@
         </div>
     </footer>
     
-    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- <script src="https://unpkg.com/scrollreveal"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js" integrity="sha512-hIlMpy2enepx9maXZF1gn0hsvPLerXoLHdb095CmRY5HG3bZfN7XPBZ14g+TUDH1aGgfLyPHmY9/zuU53smuMw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        
+        duration:1000,
+        delay:0,
+        offset:300
+      });
+    </script>
+
     <script src="main.js"></script>
 </body>
 </html>

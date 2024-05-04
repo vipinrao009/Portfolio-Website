@@ -8,6 +8,12 @@ menuIcon.onclick =()=>{
     navbar.classList.toggle('active')
 }
 
+let lightMode = document.querySelector("#dark-mode");
+lightMode.onclick = ()=>{
+    lightMode.classList.toggle("fa-moon")
+    document.body.classList.toggle('dark-mode')
+    console.log("me vipip");
+}
 //section 
 let section = document.querySelector('section')
 let navLink = document.querySelector('header nav a')
@@ -37,18 +43,7 @@ window.scroll = ()=> {
     navbar.classList.remove('active')
 };
 
-// Scroll reveal 
-
-ScrollReveal({
-    distance:'80px',
-    duration:2000,
-    delay:200
-});
-
-ScrollReveal().reveal('.home-content, heading', {origin:'top'});
-ScrollReveal().reveal('.home-image, .services-containor, .portfolio-box, .contact form', {origin:''});
-ScrollReveal().reveal('.home-content h1, .about-img', {origin:'left'});
-ScrollReveal().reveal('.home-content p, .about-content', {origin:'right'});
+// TypedJS 
 
 let typed = new Typed('.multiple-text',{
     strings:['FullStack Developer','Frontend Developer','Backend Developer'],
@@ -57,3 +52,11 @@ let typed = new Typed('.multiple-text',{
     backDelay:1000,
     loop:true
 })
+
+/* Dark mode */
+
+
+// darkMode.addEventListener('click', () => {
+//     darkMode.classList.toggle('fa-xmark');
+// });
+
