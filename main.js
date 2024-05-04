@@ -53,10 +53,41 @@ let typed = new Typed('.multiple-text',{
     loop:true
 })
 
-/* Dark mode */
 
 
-// darkMode.addEventListener('click', () => {
-//     darkMode.classList.toggle('fa-xmark');
-// });
+const form = document.querySelector('form');
+const fullName = document.querySelector('#name'); // Select by ID
+const email = document.querySelector('#email'); // Select by ID
+const phone = document.querySelector('#phone'); // Select by ID
+const subject = document.querySelector('#subject'); // Select by ID
+const mess = document.querySelector('#message'); // Select by ID
 
+function sendEmail(){
+
+    const bodyMessage = `Full Name: ${fullName.value} <br> Email: ${email.value} <br> Phone: ${phone.value} <br> Subject: ${subject.value} <br> Message: ${mess.value}`;
+    Email.send({
+        Host : "smtp.elasticemail.com",
+        Username : "vipinrao950@gmail.com",
+        Password : "93DD8509491E9EEE21F467A0F4D163C8B1EF",
+        To : 'vipinrao950@gmail.com',
+        From : "vipinrao950@gmail.com",
+        Subject : subject.value,
+        Body : bodyMessage
+    }).then(
+      message => {
+        if(message == "OK"){
+            Swal.fire({
+                title: "Success!",
+                text: "Message sent successfully!",
+                icon: "success"
+            });
+        }
+      }
+    );
+}
+
+form.addEventListener("submit",(e)=>{
+    e.preventDefault();
+    
+    sendEmail();
+});

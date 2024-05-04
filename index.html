@@ -33,7 +33,7 @@
         <div class="home-content">
             <h3>Hi, I'm</h3>
             <h1>Vipin Kumar</h1>
-            <h3>And I'am <span class="multiple-text"></span></h3>
+            <h3>And I'm <span class="multiple-text"></span></h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla optio accusantium saepe nostrum? Necessitatibus quis praesentium excepturi aspernatur sint maiores labore ab autem explicabo quos!</p>
             <div class="social-media">
                 <a href="#"><i class="fa-brands fa-facebook"></i></a>
@@ -161,16 +161,16 @@
         
         <form action="#">
             <div class="input-box">
-                <input type="text" placeholder="Enter your name">
-                <input type="email" placeholder="Enter your email">
+                <input type="text" id="name" placeholder="Enter your name">
+                <input type="email" id="email" placeholder="Enter your email">
             </div>
 
             <div class="input-box">
-                <input type="number" placeholder="Mobile number">
-                <input type="text" placeholder="Email Subject">
+                <input type="number" id="phone" placeholder="Mobile number">
+                <input type="text" id="subject" placeholder="Email Subject">
             </div>
 
-            <textarea name="" id="" cols="30" rows="10" placeholder="Your message"></textarea>
+            <textarea name="" id="message" cols="30" rows="10" placeholder="Your message"></textarea>
 
             <input type="submit" value="Send message" class="btn">
         </form>
@@ -187,9 +187,13 @@
         </div>
     </footer>
     
-    <!-- <script src="https://unpkg.com/scrollreveal"></script> -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js" integrity="sha512-hIlMpy2enepx9maXZF1gn0hsvPLerXoLHdb095CmRY5HG3bZfN7XPBZ14g+TUDH1aGgfLyPHmY9/zuU53smuMw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- sweetalert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
+    <!-- Typed -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js" integrity="sha512-hIlMpy2enepx9maXZF1gn0hsvPLerXoLHdb095CmRY5HG3bZfN7XPBZ14g+TUDH1aGgfLyPHmY9/zuU53smuMw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   
+    <!-- Animation -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init({
@@ -200,6 +204,10 @@
       });
     </script>
 
+    <!-- Send message on gmail-->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+    <!--Linking JavaScript -->
     <script src="main.js"></script>
 </body>
 </html>

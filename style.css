@@ -80,6 +80,7 @@ header{
     font-size: 2.2rem;
     color: var(--text-color);
     margin-left: 4rem;
+    cursor: pointer;
 }
 
 .home{
@@ -87,6 +88,8 @@ header{
     justify-content: center;
     align-items: center;
 }
+
+
 
 .home-content h3{
     font-size: 3.2rem;
