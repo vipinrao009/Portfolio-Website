@@ -159,19 +159,36 @@
     <section class="contact" id="contact" data-aos="zoom-in-up" >
         <h2 class="heading">Contact <span>Me</span></h2>
         
-        <form action="#">
+        <form novalidate action="#">
+            
             <div class="input-box">
-                <input type="text" id="name" placeholder="Enter your name">
-                <input type="email" id="email" placeholder="Enter your email">
+                <div class="input-field field">
+                    <input type="text" id="name" class="item" autocomplete="off" placeholder="Enter your name">
+                    <div class="error-text"> Full Name can't be blank</div>
+                </div>
+    
+                <div class="input-field field">
+                    <input type="email" id="email" class="item" autocomplete="off" placeholder="Enter your email">
+                    <div class="error-text email">Email can't be blank</div>
+                </div>
+            </div>
+            
+            <div class="input-box">
+                <div class="input-field field">
+                    <input type="number" id="phone" class="item" autocomplete="off" placeholder="Mobile number">
+                    <div class="error-text">Mobile number can't be blank</div>
+                </div>
+    
+                <div class="input-field field">
+                    <input type="text" id="subject" class="item" autocomplete="off" placeholder="Email Subject">
+                    <div class="error-text">subject can't be blank ??</div>
+                </div>
             </div>
 
-            <div class="input-box">
-                <input type="number" id="phone" placeholder="Mobile number">
-                <input type="text" id="subject" placeholder="Email Subject">
+            <div class="input-field field">
+                <textarea name="" id="message" class="item" autocomplete="off" cols="30" rows="10" placeholder="Your message"></textarea>
+                <div class="error-text">message can't be blank</div>
             </div>
-
-            <textarea name="" id="message" cols="30" rows="10" placeholder="Your message"></textarea>
-
             <input type="submit" value="Send message" class="btn">
         </form>
     </section>

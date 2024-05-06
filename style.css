@@ -364,6 +364,10 @@ span {
     flex-wrap: wrap;
 }
 
+.input-field{
+    width: 49%;
+}
+
 
 .contact form  .input-box input,
 .contact form textarea{
@@ -377,8 +381,24 @@ span {
     margin: .7rem 0;
 }
 
-.contact form  .input-box input{
+.contact form  .item input{
     width: 49%;
+}
+
+.field .error-text{
+    font-size: 14.5px;
+    color: red;
+    text-align: left;
+    margin: -5px 0 10px;
+    display: none;
+}
+
+.field.error .item{
+    border-color: #d93025;
+}
+
+.field.error .error-text{
+    display: block;
 }
 
 .contact form textarea{
@@ -551,8 +571,12 @@ span {
     html{
         font-size: 50%;
     }
-
-    .contact form .input-box input{
+    
+    .contact form .input-box {
+        display: flex;
+        flex-direction: column;
+    }
+    .contact form .input-field{
         width: 100%;
     }
     .about{

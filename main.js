@@ -81,13 +81,71 @@ function sendEmail(){
                 text: "Message sent successfully!",
                 icon: "success"
             });
+            
         }
       }
     );
 }
 
+function checkInput() {
+    const items = document.querySelectorAll(".item");
+
+    for (const item of items) {
+        if (item.value == "") {
+            item.classList.add("error");
+            item.parentElement.classList.add("error");
+        }
+
+        if(items[1].value != ""){
+            checkEmail()
+        }
+
+        items[1].addEventListener("keyup", ()=>{
+            checkEmail()
+        })
+
+        item.addEventListener("keyup", () => {
+            if (item.value != "") {
+                item.classList.remove("error");
+                item.parentElement.classList.remove("error");
+            } else {
+                item.classList.add("error");
+                item.parentElement.classList.add("error");
+            }
+        });
+    }
+}
+
+function checkEmail() {
+    const emailRegex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    
+    const emailInput = document.getElementById("email");
+    const errorTxtEmail = document.querySelector(".email.error-text");
+
+    if (!emailInput.value.match(emailRegex)) {
+        emailInput.classList.add("error");
+        emailInput.parentElement.classList.add("error");
+
+        if (emailInput.value.trim() !== "") {
+            errorTxtEmail.innerText = "Enter a valid email address";
+        } else {
+            errorTxtEmail.innerText = "Email address can't be blank";
+        }
+    } else {
+        emailInput.classList.remove("error");
+        emailInput.parentElement.classList.remove("error");
+    }
+}
+
 form.addEventListener("submit",(e)=>{
     e.preventDefault();
     
-    sendEmail();
+    checkInput()
+
+    if(!fullName.classList.contains("error") && !email.classList.contains("error") && !subject.classList.contains("error") && !phone.classList.contains("error") && !mess.classList.contains("error")){
+        sendEmail();
+        form.reset()
+        return
+    }
+
 });
