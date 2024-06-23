@@ -403,6 +403,7 @@ span {
 
 .contact form textarea{
     resize: none;
+    width: 204%;
 }
 
 .contact form .btn{
@@ -581,5 +582,53 @@ span {
     }
     .about{
         width: 100%;
+    } .home-image img{
+        width: 60vw;
+        height: 30vh;
+        margin-top: 2rem;
+        margin-bottom: 3rem;
+        font-size: 55%;
+    }
+    .about-content{
+        margin-left: 8%;
+        margin-right: 8%;
+    }
+    .home-content{
+        margin-left: 4%;
+        margin-right: 3%;
+    }
+    .contact form textarea{
+        width: 100%;
+    }
+    .dark-mode{
+        margin-left: -2rem;
     }
 }
+
+.Skills{
+    width: 30px;
+    height: 35px;
+    margin-right: 1rem;
+    
+}
+
+.Services-box .p1 {
+    border: 2px solid var(--main-color); /* You can adjust the border width and color */
+    padding: 7px; /* Optional: add padding for better spacing */
+    border-radius: 1rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+}
+
+.img-wrapper{
+    display: flex;
+    justify-content:center;
+    gap: 1.5rem;
+    margin-right: 1rem;
+    
+}
+
